@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme{
+  --text-txth1: 10vw;
+  --text-txth1--line-height: 100%;
+  --text-txth1--font-weight: 300;
+  --text-txth2: 2.5vw;
+  --text-txth2--line-height: 100%;
+  --text-txth2--font-weight: 500;
+  --text-para: 10px;
+  --text-para--line-height: 100%;
+  --text-para--font-weight: 500;
+  
+  
+}
 
 :root {
   --background: #ffffff;
@@ -14,8 +26,83 @@
   }
 }
 
+*{
+  box-sizing: border-box;
+  text-transform: uppercase;
+  /* outline: red solid 1px; */
+}
+
+html,
+body{
+@apply w-screen xl:w-[1440px] h-[500vh] 
+}
+
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white text-black  mx-auto min-h-screen 
+}
+
+h1{
+  @apply text-txth1 text-center  text-wrap
+}
+
+h2{
+  @apply text-txth2  text-wrap
+}
+
+p{
+  @apply text-para  text-wrap
+}
+section{
+  @apply w-full h-screen  flex flex-col justify-center items-center gap-4 z-2
+}
+
+.hero{
+  @apply min-h-screen
+}
+.hero h1{
+  @apply mb-1
+}
+.hero h2 {
+  @apply text-3xl
+}
+.hero p{
+  @apply w-1/2 text-center
+}
+
+.info .tags{
+@apply w-[60%] flex gap-8
+}
+
+.info h2{
+  @apply w-3/4 text-center
+}
+
+.info p{
+  @apply w-[60%]
+}
+
+.scan-info {
+  @apply  w-full flex  p-8
+}
+.product-description p{
+  @apply w-25 lg:w-full text-xs
+}
+.scan-container {
+  @apply w-1/2 h-[60%] xl:h-[80%] border-1 border-black rounded-lg
+}
+
+.barcode{
+  @apply absolute bottom-4 left-0 w-1/4 aspect-video
+}
+
+.purchased{
+  @apply absolute bottom-8 right-0 p-2 text-red-600 border-1 border-red-600 rounded-4xl 
+}
+.purchased p{
+  @apply text-[8px] md:text-para xl:text-xl lowercase md:uppercase
+}
+
+.outro h2{
+  @apply w-[70%] text-center
 }
