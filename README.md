@@ -2,6 +2,8 @@
 # soda-can
 react three fiber, framer motion, lenis, and nextjs
 
+https://github.com/user-attachments/assets/4726649b-42bc-4538-8b7b-a4e81ab88406
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
